@@ -1,0 +1,102 @@
+.dbs--form-item.dbs--checkbox-wrapper {
+    margin-bottom: 1rem;
+}
+.dbs--form-item {
+    font-family: "Open Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: flex-start;
+}
+.dbs--checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+    visibility: visible;
+    white-space: nowrap;
+    display: none;
+}
+.dbs--checkbox-label {
+    font-family: "Open Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    padding-left: 1.6rem;
+    min-height: 1.125rem;
+}
+.dbs--checkbox:checked + .dbs--checkbox-label::before,  .dbs--checkbox-label[data-contained-checkbox-state=true]::before, .dbs--checkbox-label[data-contained-checkbox-state=mixed]::before {
+    border-color: #007dbc;
+}
+.dbs--checkbox-label::before {
+    box-sizing: border-box;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: calc(50% - 9px);
+    height: 1.125rem;
+    width: 1.125rem;
+    border: 2px solid #77a0b6;
+    border-radius: 4px;
+    background-color: #ffffff;
+}
+
+
+.dbs--checkbox-label::after {
+    content: "";
+    width: 10px;
+    height: 5px;
+    background: none;
+    border-left: 2px solid #007dbc;
+    border-bottom: 2px solid #007dbc;
+    transform: scale(0) rotate(-45deg);
+    position: absolute;
+    left: 0.1875rem;
+    top: 50%;
+    margin-top: -0.3125rem;
+}
+.dbs--checkbox:checked + .dbs--checkbox-label::after, .dbs--checkbox-label[data-contained-checkbox-state=true]::after {
+    opacity: 1;
+    transform: scale(1) rotate(-45deg);
+}
+
+.dbs--checkbox:disabled + .dbs--checkbox-label, .dbs--checkbox:disabled ~ .dbs--checkbox-label-text, .dbs--checkbox-label[data-contained-checkbox-disabled=true] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.dbs--input-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: flex-start;
+    width: 100%;
+  }
+  
+  .dbs--input-group__vertical .dbs--input-group-inside {
+    flex-direction: column;
+  }
+  .dbs--input-group__vertical .dbs--input-group-inside > * {
+    margin-bottom: 0.75rem;
+  }
+  
+  .dbs--input-group-inside {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+    order: 2;
+    width: 100%;
+  }
+  .dbs--input-group-inside > * {
+    margin-right: 1.5rem;
+  }
+  .dbs--input-group-inside .dbs--form-item {
+    flex: none;
+  }

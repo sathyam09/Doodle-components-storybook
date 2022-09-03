@@ -1,0 +1,20 @@
+.dbs--textarea-fullwidth {
+    width: 100%;
+}
+.dbs--text-area {
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.875rem;
+    min-height: 40px;
+    padding: 0.5rem;
+    color: #001f2f;
+    background-color: #ffffff;
+    appearance: none;
+    border: 1px solid #77a0b6;
+    border-radius: 0px;
+    order: 2;
+    resize: vertical;
+    box-sizing: border-box;
+}
+input[data-invalid], textarea[data-invalid], select[data-invalid], .dbs--list-box[data-invalid] {
+    border-color: #c5192d;
+}

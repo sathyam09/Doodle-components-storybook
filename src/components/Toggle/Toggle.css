@@ -1,0 +1,51 @@
+.ToggleButton .button-switch .switch {
+    position: absolute;
+    cursor: pointer;
+    background-color: grey;
+    border-radius: 25px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: background-color 0.2s ease;
+}
+.ToggleButton .button-switch .switch.large::before {
+    left: 2px;
+    top: 2px;
+    width: 21px;
+    height: 21px;
+}
+
+.ToggleButton .button-switch.large {
+    width: 50px;
+    height: 25px;
+}
+.ToggleButton .button-switch {
+    position: relative;
+    display: inline-block;
+}
+.ToggleButton .button-switch input[type=checkbox]:checked + .switch {
+    background-color: green;
+}
+.ToggleButton .button-switch .switch {
+    position: absolute;
+    cursor: pointer;
+    background-color: grey;
+    border-radius: 25px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: background-color 0.2s ease;
+}
+.ToggleButton .button-switch.large input[type=checkbox]:checked + .switch::before {
+    transform: translateX(25px);
+}
+
+.ToggleButton .button-switch .switch::before {
+    position: absolute;
+    content: "";
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
